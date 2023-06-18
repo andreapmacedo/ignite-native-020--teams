@@ -13,11 +13,12 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
         <StatusBar 
-          barStyle="light-content"
-          backgroundColor="transparent"
-          translucent
+          barStyle="light-content" // A cor dos ícones da status bar fica branca
+          backgroundColor="transparent" // O background da status bar fica transparente
+          translucent // A cor de background do app vai ser a visível na status bar
         />
         { fontsLoaded ? <Groups/> : <Loading/> }
     </ThemeProvider>
   );
 }
+
