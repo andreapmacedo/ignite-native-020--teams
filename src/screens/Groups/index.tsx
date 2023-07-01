@@ -11,7 +11,8 @@ import { Button } from '@components/Button';
 import { Container } from './styles';
 
 export function Groups() {
-  const [groups, setGroups] = useState<string[]>([]);
+  const [groups, setGroups] = useState<string[]>([]); // Tipagem explícita
+  // const [groups, setGroups] = useState(['']); // Tipagem implícita
 
   return (
     <Container>
@@ -23,7 +24,7 @@ export function Groups() {
 
       <FlatList 
         data={groups}
-        keyExtractor={item => item}
+        keyExtractor={item => item} // Identificador único para cada componente da lista
         renderItem={({ item }) => (
           <GroupCard 
             title={item} 
