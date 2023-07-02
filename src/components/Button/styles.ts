@@ -1,5 +1,4 @@
 import { TouchableOpacity } from "react-native";
-import styled, { css } from "styled-components/native";
 
 export type ButtonTypeStyleProps = 'PRIMARY' | 'SECONDARY';
 
@@ -16,8 +15,9 @@ export const Container = styled(TouchableOpacity as any)<Props>`
   
   justify-content: center;
   align-items: center;
-`;
+  `;
 
+import styled, { css } from "styled-components/native";
 
 export const Title = styled.Text`
   ${({ theme }) => css`
