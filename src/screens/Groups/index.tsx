@@ -6,13 +6,21 @@ import { Header } from '@components/Header';
 import { Highlight } from '@components/Highlight';
 import { ListEmpty } from '@components/ListEmpty';
 import { Button } from '@components/Button';
+import { useNavigation } from '@react-navigation/native'
 // import { ListEmpty } from '@components/ListEmpty';
-
 import { Container } from './styles';
 
-export function Groups() {
+// export function Groups(props: any) { // Navegação com props
+export function Groups() { // Navegação com destructuring
   const [groups, setGroups] = useState<string[]>([]); // Tipagem explícita
   // const [groups, setGroups] = useState(['']); // Tipagem implícita
+  const navigation = useNavigation() 
+
+  function handleNewGroup() {
+    // props.navigation.navigate('new') // Navegação com props
+    navigation.navigate('new')
+  }
+
 
   return (
     <Container>
@@ -37,6 +45,7 @@ export function Groups() {
       />
       <Button 
         title='Criar nova turma'
+        onPress={handleNewGroup}
       />
     </Container>
   );

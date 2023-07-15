@@ -4,8 +4,10 @@ import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/
 
 import theme from './src/theme';
 
-import { Groups } from '@screens/Groups';
 import { Loading } from '@components/Loading';
+import { Groups } from '@screens/Groups';
+// import { Groups } from '@screens/Groups';
+import { Routes } from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
@@ -17,7 +19,8 @@ export default function App() {
           backgroundColor="transparent" // O background da status bar fica transparente
           translucent // A cor de background do app vai ser a visível na status bar
         />
-        { fontsLoaded ? <Groups/> : <Loading/> }
+        {/* { fontsLoaded ? <Groups/> : <Loading/> } */}
+        { fontsLoaded ? <Routes /> : <Loading /> }
     </ThemeProvider>
   );
 }
