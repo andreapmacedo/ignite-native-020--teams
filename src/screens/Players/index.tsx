@@ -29,6 +29,7 @@ export function Players() {
 
       <Highlight 
         // title="Nome da turma"
+        // title={route.params.group} sem desestruturar.
         title={group}
         subtitle="adicione a galera e separe os times"
       />
