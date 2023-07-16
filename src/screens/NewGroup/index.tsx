@@ -12,7 +12,6 @@ export function NewGroup() {
 
   const navigation = useNavigation()
 
-  
     async function handleNew() {
     try {
       await groupCreate(group);
